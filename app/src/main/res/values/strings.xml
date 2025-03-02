@@ -8,4 +8,12 @@
     <string name="submit">Submit</string>
     <string name="password">Password</string>
     <string name="username">Username</string>
+    <string name="next">Next</string>
+    <string name="congrats">Congrats! Your score is: </string>
+    <string name="restart">Restart</string>
+    <string name="view_history">History</string>
+    <string name="select">Select level</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
 </resources>

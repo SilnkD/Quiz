@@ -64,7 +64,7 @@ public class ScoreFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyScoreRecyclerViewAdapter(PlaceholderContent.ITEMS));
+            recyclerView.setAdapter(new ScoreAdapter(PlaceholderContent.ITEMS));
         }
         return view;
     }

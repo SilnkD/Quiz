@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'com.example.quiz'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.example.quiz"
-        minSdk 24
-        targetSdk 34
+        minSdk 25
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -28,6 +28,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
 }
 
@@ -39,6 +40,9 @@ dependencies {
     implementation libs.constraintlayout
     implementation libs.legacy.support.v4
     implementation libs.recyclerview
+    implementation libs.annotation
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
