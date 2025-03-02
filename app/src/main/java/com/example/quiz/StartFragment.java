@@ -3,10 +3,13 @@ package com.example.quiz;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,43 @@ public class StartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_start, container, false);
+        View view = inflater.inflate(R.layout.fragment_start, container, false);
+
+        ImageView history = view.findViewById(R.id.history_icon);
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //logic
+                Navigation.findNavController(view).navigate(R.id.action_startFragment_to_scoreFragment);
+            }
+        });
+
+        Button easy_level = view.findViewById(R.id.easy_button);
+        easy_level.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //logic
+                Navigation.findNavController(view).navigate(R.id.action_startFragment_to_questionFragment);
+            }
+        });
+
+        Button medium_level = view.findViewById(R.id.medium_button);
+        medium_level.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //logic
+                Navigation.findNavController(view).navigate(R.id.action_startFragment_to_questionFragment);
+            }
+        });
+
+        Button hard_level = view.findViewById(R.id.hard_button);
+        hard_level.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //logic
+                Navigation.findNavController(view).navigate(R.id.action_startFragment_to_questionFragment);
+            }
+        });
+        return view;
     }
 }

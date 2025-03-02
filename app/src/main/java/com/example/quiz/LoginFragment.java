@@ -3,6 +3,7 @@ package com.example.quiz;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -67,14 +68,15 @@ public class LoginFragment extends Fragment {
         to_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registerFragment);
+                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registerFragment);
             }
         });
         Button submit = view.findViewById(R.id.submit_button);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //logic
+                //login logic
+                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_startFragment);
             }
         });
         return view;
